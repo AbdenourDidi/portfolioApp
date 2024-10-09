@@ -22,7 +22,7 @@ const ImageContainer = styled.div`
 `;
 
 const ImageRond = styled.div`
-  /* border-radius: 100px; */
+  border-radius: 100px;
   background-color: red;
   overflow: hidden;
   width: 150px;
@@ -34,7 +34,11 @@ const Hero = () => {
     <HeroContainer>
       <ImageContainer>
         <ImageRond>
-          <img src={profil} alt="photo de profil" style={{ transform: `translate(-380px, -400px)` }} />
+          <img
+            src={profil}
+            alt="photo de profil"
+            style={{ height: 250, transform: `translate(-20px, -05px)` }}
+          />
         </ImageRond>
       </ImageContainer>
       <DescriptionContainer>
