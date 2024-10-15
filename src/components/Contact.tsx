@@ -1,7 +1,7 @@
 import styled from "styled-components";
-const git = "../assets/Github.png";
-const mail = "../assets/Mail.png";
-const linkedin = "../assets/Linkedin.png";
+import git from "../assets/Github.svg";
+import mail from "../assets/Mail.svg";
+import linkedin from "../assets/Linkedin.svg";
 const ContactContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -35,12 +35,11 @@ const Contact = () => {
             width: 147,
             height: 40,
             borderRadius: 50,
-            backgroundColor: "black",
           }}
           type="button"
         >
           <img
-            src="../assets/Github.png"
+            src={git}
             alt="Git"
             width="42"
             height="42"
@@ -54,7 +53,7 @@ const Contact = () => {
           type="button"
         >
           <img
-            src="../assets/Linkedin.png"
+            src={linkedin}
             alt="Linkedin"
             width="42"
             height="42"
@@ -69,7 +68,7 @@ const Contact = () => {
           type="button"
         >
           <img
-            src="../assets/Mail.png"
+            src={mail}
             alt="Mail"
             width="42"
             height="42"
