@@ -3,8 +3,9 @@ import styled from 'styled-components'
 
 const GridContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 2 colonnes de tailles égales */
-  grid-template-rows: repeat(3, 1fr); /* 2 lignes de tailles égales */
+  /* grid-template-columns: repeat(3, 1fr); 2 colonnes de tailles égales */
+  grid-template-columns: repeat(auto-fill);
+  grid-template-rows: repeat(auto-fill);
   gap: 20px;
   padding: 10px;
 `;

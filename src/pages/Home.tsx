@@ -11,13 +11,11 @@ justify-content: center;
 align-items: center;
 display: flex;
 `
+const Width = styled.div`
+width: 100%;
+height: 100px;
+`
 
-const InnerTest = () => {
-  return (
-    <Test>
-    </Test>
-  );
-}
 const HeroContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -35,16 +33,16 @@ const Home = () => {
           <Bento>test2</Bento>
         </GridItem>
         <GridItem column={2} row={1} colspan={2}>
-          <Bento>test2</Bento>
+          <Bento><Width /></Bento>
         </GridItem>
         <GridItem column={1} row={0}>
           <Bento><Test>test</Test></Bento>
         </GridItem>
         <GridItem column={2} row={0}>
-          <Bento><Test>testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest</Test></Bento>
+          <Bento><Test>test</Test></Bento>
         </GridItem>
         <GridItem column={3} row={0}>
-          <Bento><Test>testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest</Test></Bento>
+          <Bento><Test>test</Test></Bento>
         </GridItem>
       </Grid>
     </PageContainer>
