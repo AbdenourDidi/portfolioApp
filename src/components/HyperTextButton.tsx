@@ -7,8 +7,10 @@ const HoverCss = styled.a`
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  width: 147px;
-  height: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 23px;
+  padding-right: 23px;
   color: inherit;
   border-radius: 50px;
   gap: 10px;
