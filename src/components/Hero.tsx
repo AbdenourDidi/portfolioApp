@@ -23,6 +23,7 @@ const ImageContainer = styled.div`
 
 const ImageRond = styled.div`
   border-radius: 100px;
+  background-color: red;
   overflow: hidden;
   width: 150px;
   height: 150px;
