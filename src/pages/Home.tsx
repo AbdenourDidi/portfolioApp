@@ -1,10 +1,11 @@
-import Bento from '../components/Bento'
-import styled from 'styled-components'
-import Grid from '../components/Grid'
-import GridItem from '../components/GridItem'
-import PageContainer from '../components/PageContainer'
+import Bento from "../components/Bento";
+import styled from "styled-components";
+import Grid from "../components/Grid";
+import GridItem from "../components/GridItem";
+import PageContainer from "../components/PageContainer";
 import React from "react";
 import Hero from "../components/Hero";
+import Contact from "../components/Contact";
 
 const Test = styled.div`
   justify-content: center;
@@ -24,16 +25,16 @@ const HeroContainer = styled.div`
 `;
 
 const Home = () => {
-
   return (
     <PageContainer>
       <HeroContainer>
         <Hero />
       </HeroContainer>
+      <Contact />
       <Bento>test2</Bento>
       <Bento>test2</Bento>
     </PageContainer>
-  )
+  );
 };
 
 export default Home;
