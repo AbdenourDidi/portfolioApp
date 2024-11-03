@@ -1,4 +1,3 @@
-import { useState } from "react";
 import styled from "styled-components";
 import HyperTextButton from "./HyperTextButton";
 import gitBlack from "../assets/GithubNoir.svg";
@@ -36,8 +35,6 @@ const LinkContainerRight = styled.div`
 `;
 
 const Contact = () => {
-  const [image, setImage] = useState(gitBlack);
-
   return (
     <ContactContainer>
       <LinkContainerLeft>
