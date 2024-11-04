@@ -6,6 +6,9 @@ import PageContainer from "../components/PageContainer";
 import React from "react";
 import Hero from "../components/Hero";
 import Contact from "../components/Contact";
+import BentoContent from "../components/BentoContent";
+import FoodX from "../assets/FoodX presentation.png";
+import PAE from "../assets/Admin Home Pae.png";
 
 const Test = styled.div`
   justify-content: center;
@@ -31,8 +34,24 @@ const Home = () => {
         <Hero />
       </HeroContainer>
       <Contact />
-      <Bento>test2</Bento>
-      <Bento>test2</Bento>
+      <Bento>
+        <BentoContent
+          img={FoodX}
+          front="Javascript"
+          back="Javascript"
+          projet="School Projet"
+          titre="FoodX"
+        />
+      </Bento>
+      <Bento>
+        <BentoContent
+          img={PAE}
+          front="Angular"
+          back="Nestjs"
+          projet="PAE"
+          titre="Doc & Vous"
+        />
+      </Bento>
     </PageContainer>
   );
 };
