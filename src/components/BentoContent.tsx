@@ -24,6 +24,11 @@ const LanguageContentContainer = styled.p`
   padding-left: 20px;
   padding-right: 20px;
 `;
+const StyledP = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+`;
 
 interface BentoContentProps {
   img: string;
@@ -59,8 +64,10 @@ const BentoContent: React.FC<BentoContentProps> = ({
           <b>{back}</b>
         </LanguageContentContainer>
       </LanguageContent>
-      <p>{projet}</p>
-      <b>{titre}</b>
+      <StyledP>
+        <p style={{ margin: 0, height: 20 }}>{projet}</p>
+        <b style={{ height: 24 }}>{titre}</b>
+      </StyledP>
     </BentoContentContainer>
   );
 };
