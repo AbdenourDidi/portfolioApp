@@ -1,10 +1,11 @@
-import { lazy, Suspense } from 'react';
-import { Routes, Route } from 'react-router-dom';
-import './App.css';
+import { lazy, Suspense } from "react";
+import { Routes, Route } from "react-router-dom";
+import "./App.css";
+import Projects from "./pages/Projects";
 
-const Home = lazy(() => import('./pages/Home'));
-const Project = lazy(() => import('./pages/Project'));
-const NotFound = lazy(() => import('./pages/NotFound'));
+const Home = lazy(() => import("./pages/Home"));
+const Project = lazy(() => import("./pages/Project"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/project/:slug" element={<Project />} />
+          <Route path="/projects/" element={<Projects />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
