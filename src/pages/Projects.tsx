@@ -1,7 +1,19 @@
 import React from "react";
 import styled from "styled-components";
+import imageLogin from "../assets/FoodX Login.png";
+import imageRegister from "../assets/FoodX Register.png";
+import imageHome from "../assets/FoodX Home.png";
+import imageProfil from "../assets/FoodX profil.png";
+import imageAdd from "../assets/FoodX Add recipe.png";
+import imageDetails from "../assets/FoodX Details recipe.png";
+
 import PageContainer from "../components/PageContainer";
-const ProjectsContainer = styled.div``;
+const ProjectsContainer = styled.div`
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+`;
+
 const ProjectsDescriptionContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -21,10 +33,32 @@ const DescriptionContainer = styled.div`
   align-items: flex-start;
 `;
 
-const Projects = () => {
+const ImageProjets = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+`;
+
+interface ProjectsProps {
+  titre: string;
+  category: string;
+  year: string;
+  description: string;
+  img: string;
+}
+
+const Projects: React.FC<ProjectsProps> = ({
+  titre,
+  category,
+  year,
+  description,
+  img,
+}) => {
   return (
     <ProjectsContainer>
-      <h1>FoodX</h1>{" "}
+      <h1>{titre}</h1>{" "}
       <hr
         style={{
           width: 638,
@@ -36,23 +70,25 @@ const Projects = () => {
         <DetailsContainer>
           <RowContainer>
             <b>Catégorie</b>
-            <p>developpement web</p>
+            <p>{category}</p>
           </RowContainer>
           <RowContainer>
             <b>Année</b>
-            <p>2022</p>
+            <p>{year}</p>
           </RowContainer>
         </DetailsContainer>
         <DescriptionContainer>
-          <p>
-            Un site de recettes de cuisine qui aide à choisir quoi préparer pour
-            le dîner en fonction des ingrédients disponibles. Il offre aussi la
-            possibilité de créer et partager ses propres recettes, favorisant
-            ainsi l'inspiration culinaire et l'échange entre passionnés de
-            cuisine.
-          </p>
+          <p>{description}</p>
         </DescriptionContainer>
       </ProjectsDescriptionContainer>
+      <ImageProjets>
+        <img width="1272px" height="625px" src={imageLogin} />
+        <img width="1272px" height="625px" src={imageRegister} />
+        <img width="1272px" height="625px" src={imageHome} />
+        <img width="1272px" height="625px" src={imageAdd} />
+        <img width="1272px" height="625px" src={imageDetails} />
+        <img width="1272px" height="625px" src={imageProfil} />
+      </ImageProjets>
     </ProjectsContainer>
   );
 };
