@@ -7,14 +7,27 @@ import imageProfil from "../assets/FoodX profil.png";
 import imageAdd from "../assets/FoodX Add recipe.png";
 import imageDetails from "../assets/FoodX Details recipe.png";
 
+const Page = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+`;
+
+const TopContainer = styled.div`
+  
+`;
+
 const ProjectsDescriptionContainer = styled.div`
   display: flex;
+  flex: 1;
   flex-direction: row;
-  gap: 50px;
+  align-items: center;
 `;
 const DetailsContainer = styled.div`
   display: flex;
+  flex: 1;
   flex-direction: column;
+  gap: 50px;
 `;
 const RowContainer = styled.div`
   display: flex;
@@ -22,6 +35,8 @@ const RowContainer = styled.div`
   gap: 20px;
 `;
 const DescriptionContainer = styled.div`
+  display: flex;
+  flex: 1;
   flex-direction: column;
   align-items: flex-start;
 `;
@@ -50,31 +65,32 @@ const Projects: React.FC<ProjectsProps> = ({
   img,
 }) => {
   return (
-    <>
-      <h1>{titre}</h1>{" "}
-      <hr
-        style={{
-          width: 500,
-          border: `1px solid black`,
-          marginLeft: 0,
-        }}
-      />
-      <ProjectsDescriptionContainer>
-        <DetailsContainer>
-          <RowContainer>
-            <b>Catégorie</b>
-            <p>{category}</p>
-          </RowContainer>
-          <RowContainer>
-            <b>Année</b>
-            <p>{year}</p>
-          </RowContainer>
-        </DetailsContainer>
-        <DescriptionContainer>
-          <p>{description}</p>
-        </DescriptionContainer>
-      </ProjectsDescriptionContainer>
-      <br />
+    <Page>
+      <TopContainer>
+        <h1>{titre}</h1>
+        <hr
+          style={{
+            width: 500,
+            border: `1px solid black`,
+            marginLeft: 0,
+          }}
+        />
+        <ProjectsDescriptionContainer>
+          <DetailsContainer>
+            <RowContainer>
+              <b>Catégorie</b>
+              <p>{category}</p>
+            </RowContainer>
+            <RowContainer>
+              <b>Année</b>
+              <p>{year}</p>
+            </RowContainer>
+          </DetailsContainer>
+          <DescriptionContainer>
+            <p>{description}</p>
+          </DescriptionContainer>
+        </ProjectsDescriptionContainer>
+      </TopContainer>
       <ImageProjets>
         <img width="1272px" height="625px" src={imageLogin} />
         <img width="1272px" height="625px" src={imageRegister} />
@@ -83,7 +99,7 @@ const Projects: React.FC<ProjectsProps> = ({
         <img width="1272px" height="625px" src={imageDetails} />
         <img width="1272px" height="625px" src={imageProfil} />
       </ImageProjets>
-    </>
+    </Page>
   );
 };
 
