@@ -7,13 +7,6 @@ import imageProfil from "../assets/FoodX profil.png";
 import imageAdd from "../assets/FoodX Add recipe.png";
 import imageDetails from "../assets/FoodX Details recipe.png";
 
-import PageContainer from "../components/PageContainer";
-const ProjectsContainer = styled.div`
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-`;
-
 const ProjectsDescriptionContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -57,11 +50,11 @@ const Projects: React.FC<ProjectsProps> = ({
   img,
 }) => {
   return (
-    <ProjectsContainer>
+    <>
       <h1>{titre}</h1>{" "}
       <hr
         style={{
-          width: 638,
+          width: 500,
           border: `1px solid black`,
           marginLeft: 0,
         }}
@@ -81,6 +74,7 @@ const Projects: React.FC<ProjectsProps> = ({
           <p>{description}</p>
         </DescriptionContainer>
       </ProjectsDescriptionContainer>
+      <br />
       <ImageProjets>
         <img width="1272px" height="625px" src={imageLogin} />
         <img width="1272px" height="625px" src={imageRegister} />
@@ -89,7 +83,7 @@ const Projects: React.FC<ProjectsProps> = ({
         <img width="1272px" height="625px" src={imageDetails} />
         <img width="1272px" height="625px" src={imageProfil} />
       </ImageProjets>
-    </ProjectsContainer>
+    </>
   );
 };
 
