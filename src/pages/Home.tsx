@@ -8,7 +8,8 @@ import Hero from "../components/Hero";
 import Contact from "../components/Contact";
 import BentoContent from "../components/BentoContent";
 import FoodX from "../assets/FoodX presentation.png";
-import PAE from "../assets/Admin Home Pae.png";
+import AdminHomeStage from "../assets/Admin Home stage.png";
+import HomeQuickFire from "../assets/Home QuickFire.png";
 
 const Test = styled.div`
   justify-content: center;
@@ -39,17 +40,26 @@ const Home = () => {
           img={FoodX}
           front="Javascript"
           back="Javascript"
-          projet="School Projet"
+          projet="Project école "
           titre="FoodX"
         />
       </Bento>
       <Bento>
         <BentoContent
-          img={PAE}
+          img={AdminHomeStage}
           front="Angular"
           back="Nestjs"
-          projet="PAE"
+          projet="Stage"
           titre="Doc & Vous"
+        />
+      </Bento>
+      <Bento>
+        <BentoContent
+          img={HomeQuickFire}
+          front="React-Native"
+          back="Django"
+          projet="Project école"
+          titre="QuickFire"
         />
       </Bento>
     </PageContainer>
