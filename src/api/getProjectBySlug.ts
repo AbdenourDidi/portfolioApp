@@ -60,7 +60,7 @@ const projects: Project[] = [
     content: [
       {
         title: "Accueil",
-        images: [require("../assets/Admin Home Stage.png")],
+        images: [require("../assets/Admin Home stage.png")],
       },
       {
         title: "Planning",

@@ -1,8 +1,5 @@
 import Bento from "../components/Bento";
 import styled from "styled-components";
-import Grid from "../components/Grid";
-import GridItem from "../components/GridItem";
-import React from "react";
 import Hero from "../components/Hero";
 import Contact from "../components/Contact";
 import BentoContent from "../components/BentoContent";
@@ -70,7 +67,6 @@ const Home = () => {
           titre="QuickFire"
         />
       </Bento>
-      {/* Projects */}
       {/* Skills */}
     </Gap>
   );
