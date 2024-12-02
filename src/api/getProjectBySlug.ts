@@ -64,7 +64,11 @@ const projects: Project[] = [
       },
       {
         title: "Planning",
-        images: [require("../assets/Admin planning event stage.png")],
+        images: [
+          require("../assets/Admin planning event stage.png"),
+          require("../assets/Admin detail event pop-up green stage.png"),
+          require("../assets/Admin detail event pop-up red stage.png"),
+        ],
       },
       {
         title: "Rendez-vous",

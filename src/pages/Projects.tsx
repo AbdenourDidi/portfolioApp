@@ -13,9 +13,7 @@ const Page = styled.div`
   gap: 60px;
 `;
 
-const TopContainer = styled.div`
-  
-`;
+const TopContainer = styled.div``;
 
 const ProjectsDescriptionContainer = styled.div`
   display: flex;
@@ -92,12 +90,12 @@ const Projects: React.FC<ProjectsProps> = ({
         </ProjectsDescriptionContainer>
       </TopContainer>
       <ImageProjets>
-        <img width="1272px" height="625px" src={imageLogin} />
+        {/* <img width="1272px" height="625px" src={imageLogin} />
         <img width="1272px" height="625px" src={imageRegister} />
         <img width="1272px" height="625px" src={imageHome} />
         <img width="1272px" height="625px" src={imageAdd} />
         <img width="1272px" height="625px" src={imageDetails} />
-        <img width="1272px" height="625px" src={imageProfil} />
+        <img width="1272px" height="625px" src={imageProfil} /> */}
       </ImageProjets>
     </Page>
   );
