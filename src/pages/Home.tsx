@@ -31,6 +31,16 @@ const HeroContainer = styled.div`
   justify-content: center;
   align-items: center;
 `;
+const BentoContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+`;
+const Bentos = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+`;
 
 const Home = () => {
   return (
@@ -40,33 +50,48 @@ const Home = () => {
         <Contact />
       </HeroContainer>
       <Contact />
-      <Bento>
-        <BentoContent
-          img={FoodX}
-          front="Javascript"
-          back="Javascript"
-          projet="Project école "
-          titre="FoodX"
-        />
-      </Bento>
-      <Bento>
-        <BentoContent
-          img={AdminHomeStage}
-          front="Angular"
-          back="Nestjs"
-          projet="Stage"
-          titre="Doc & Vous"
-        />
-      </Bento>
-      <Bento>
-        <BentoContent
-          img={HomeQuickFire}
-          front="React-Native"
-          back="Django"
-          projet="Project école"
-          titre="QuickFire"
-        />
-      </Bento>
+      <Bentos>
+        <BentoContainer>
+          <Bento>
+            <BentoContent
+              img={FoodX}
+              front="Javascript"
+              back="Javascript"
+              projet="Project école "
+              titre="FoodX"
+            />
+          </Bento>
+          <Bento>
+            <BentoContent
+              img={AdminHomeStage}
+              front="Angular"
+              back="Nestjs"
+              projet="Stage"
+              titre="Doc & Vous"
+            />
+          </Bento>
+        </BentoContainer>
+        <BentoContainer>
+          <Bento>
+            <BentoContent
+              img={HomeQuickFire}
+              front="React-Native"
+              back="Django"
+              projet="Project école"
+              titre="QuickFire"
+            />
+          </Bento>
+          <Bento>
+            <BentoContent
+              img={HomeQuickFire}
+              front="React-Native"
+              back="Django"
+              projet="Project école"
+              titre="QuickFire"
+            />
+          </Bento>
+        </BentoContainer>
+      </Bentos>
       {/* Skills */}
     </Gap>
   );

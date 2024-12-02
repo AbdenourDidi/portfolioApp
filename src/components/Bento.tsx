@@ -7,6 +7,7 @@ const Container = styled.div`
   border-radius: 30px;
   border: 1px solid #e5e7eb;
   overflow: hidden;
+  min-width: 46%;
 `;
 
 const Bento = ({ children }: PropsWithChildren) => {

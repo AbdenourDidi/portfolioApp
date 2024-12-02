@@ -1,8 +1,9 @@
 import styled from "styled-components";
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 const BentoContentContainer = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 24px;
 `;
 
 const ImageRond = styled.img`
@@ -29,6 +30,12 @@ const StyledP = styled.div`
   flex-direction: column;
   gap: 10px;
 `;
+const ImageContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
 
 interface BentoContentProps {
   img: string;
@@ -47,24 +54,27 @@ const BentoContent: React.FC<BentoContentProps> = ({
 }) => {
   const image = new Image();
   image.src = img;
-  const [width, setWidth] = useState(563);
 
-  if (image.naturalHeight > image.naturalWidth) {
-    setWidth(image.naturalWidth);
-  }
+  const width = useMemo(() => {
+    if (image.naturalHeight > image.naturalWidth) {
+      return image.naturalWidth / 3;
+    }
+    return '100%';
+  }, [])
 
   return (
     <BentoContentContainer>
-      <img
-        src={img}
-        width={width}
-        height="274.51"
-        style={{
-          borderRadius: 10,
-          boxShadow: `0px 4px 20px 0px rgba(0, 0, 0, 0.3)`,
-        }}
-      />
-      ;
+      <ImageContainer>
+        <img
+          src={img}
+          width={width}
+          height={275}
+          style={{
+            borderRadius: 10,
+            boxShadow: `0px 4px 20px 0px rgba(0, 0, 0, 0.3)`,
+          }}
+        />
+      </ImageContainer>
       <LanguageContent>
         <LanguageContentContainer>
           <b>{front}</b>
