@@ -31,7 +31,16 @@ const ProjectImage = ({ title, images }: Props) => {
     <Container>
       <Title>{title}</Title>
       <ImagesContainer>
-        {images.map((image) => <img width="1272px" height="625px" src={image} />)}
+        {images.map((image) => {
+          const img = new Image();
+          let width: string | undefined = "100%";
+          img.src = image;
+
+          if (img.naturalHeight > img.naturalWidth) {
+            width = undefined;
+          }
+          return <img width={width} src={image} />
+        })}
       </ImagesContainer>
     </Container>
   )

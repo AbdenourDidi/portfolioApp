@@ -47,14 +47,6 @@ const ImageProjets = styled.div`
   gap: 45px;
 `;
 
-interface ProjectsProps {
-  titre: string;
-  category: string;
-  year: string;
-  description: string;
-  img: string;
-}
-
 const Project = () => {
   const [project, setProject] = useState<ProjectInterface | undefined>(undefined)
   const { slug } = useParams();
