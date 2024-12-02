@@ -16,9 +16,11 @@ const HoverCss = styled.a`
   gap: 10px;
   font-size: 14px;
   font-weight: bold;
+  transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
   &:hover {
     background-color: black;
     color: white;
+    transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
   }
 `;
 interface HyperTextButtonProps {
