@@ -6,11 +6,6 @@ const BentoContentContainer = styled.div`
   gap: 24px;
 `;
 
-const ImageRond = styled.img`
-  border-radius: 10px;
-  box-shadow: 4px 4px 6px #888;
-`;
-
 const LanguageContent = styled.div`
   display: flex;
   flex-direction: row;
@@ -54,13 +49,12 @@ const BentoContent: React.FC<BentoContentProps> = ({
 }) => {
   const image = new Image();
   image.src = img;
-
   const width = useMemo(() => {
     if (image.naturalHeight > image.naturalWidth) {
       return image.naturalWidth / 3;
     }
-    return '100%';
-  }, [])
+    return "100%";
+  }, []);
 
   return (
     <BentoContentContainer>

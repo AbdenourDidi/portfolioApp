@@ -81,15 +81,6 @@ const Home = () => {
               titre="QuickFire"
             />
           </Bento>
-          <Bento>
-            <BentoContent
-              img={HomeQuickFire}
-              front="React-Native"
-              back="Django"
-              projet="Project école"
-              titre="QuickFire"
-            />
-          </Bento>
         </BentoContainer>
       </Bentos>
       {/* Skills */}

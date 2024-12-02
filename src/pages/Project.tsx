@@ -1,9 +1,13 @@
 import styled from "styled-components";
 import { useNavigate, useParams } from "react-router-dom";
-import { ProjectContent, Project as ProjectInterface } from "../api/models/Project";
+import {
+  ProjectContent,
+  Project as ProjectInterface,
+} from "../api/models/Project";
 import { getProjectBySlug } from "../api/getProjectBySlug";
 import ProjectImage from "../components/ProjectImage";
 import { useEffect, useState } from "react";
+import ProjectVideo from "../components/ProjectVideo";
 
 const Page = styled.div`
   display: flex;
@@ -11,9 +15,7 @@ const Page = styled.div`
   gap: 60px;
 `;
 
-const TopContainer = styled.div`
-  
-`;
+const TopContainer = styled.div``;
 
 const ProjectsDescriptionContainer = styled.div`
   display: flex;
@@ -48,20 +50,22 @@ const ImageProjets = styled.div`
 `;
 
 const Project = () => {
-  const [project, setProject] = useState<ProjectInterface | undefined>(undefined)
+  const [project, setProject] = useState<ProjectInterface | undefined>(
+    undefined
+  );
   const { slug } = useParams();
   const navigate = useNavigate();
 
   useEffect(() => {
     if (slug) {
-      const proj = getProjectBySlug(slug)
+      const proj = getProjectBySlug(slug);
       if (proj) {
         setProject(proj);
       } else {
         navigate("/notfound", { replace: true });
       }
     }
-  }, [slug])
+  }, [slug]);
   return (
     <Page>
       <TopContainer>
@@ -92,12 +96,19 @@ const Project = () => {
       <ImageProjets>
         {project?.content.map((content: ProjectContent) => {
           if (content.images) {
-            return <ProjectImage title={content.title} images={content.images} />
+            return (
+              <ProjectImage title={content.title} images={content.images} />
+            );
+          }
+          if (content.videos) {
+            return (
+              <ProjectVideo title={content.title} videos={content.videos} />
+            );
           }
         })}
       </ImageProjets>
     </Page>
-  )
-}
+  );
+};
 
-export default Project
+export default Project;

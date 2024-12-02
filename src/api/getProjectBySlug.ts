@@ -45,7 +45,7 @@ const projects: Project[] = [
     content: [
       {
         title: "Video Presentation",
-        images: ["../assets/QuickFire Video.mov"],
+        videos: [require("../assets/QuickFire Video.mp4")],
       },
     ],
   },
