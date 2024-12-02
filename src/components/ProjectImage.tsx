@@ -1,5 +1,5 @@
-import React from 'react'
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 interface Props {
   title: string;
@@ -39,11 +39,11 @@ const ProjectImage = ({ title, images }: Props) => {
           if (img.naturalHeight > img.naturalWidth) {
             width = undefined;
           }
-          return <img width={width} src={image} />
+          return <img width={width} src={image} />;
         })}
       </ImagesContainer>
     </Container>
-  )
-}
+  );
+};
 
-export default ProjectImage
+export default ProjectImage;
