@@ -32,16 +32,6 @@ const ProjectVideo = ({ title, videos }: Props) => {
       <Title>{title}</Title>
       <VideosContainer>
         {videos.map((video) => {
-          //   const img = new Image();
-          //   let width: number | string | undefined = "100%";
-          //   img.src = image;
-
-          //   if (img.naturalHeight > img.naturalWidth) {
-          //     width = img.naturalWidth;
-          //   }
-          //   return <img width={width} src={image} />;
-          // })}
-          console.log(video);
           return (
             <video width="400" height="700" controls>
               <source src={video} type="video/mp4" />

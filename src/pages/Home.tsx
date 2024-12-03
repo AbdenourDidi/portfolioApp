@@ -49,38 +49,53 @@ const Home = () => {
         <Hero />
         <Contact />
       </HeroContainer>
-      <Contact />
       <Bentos>
         <BentoContainer>
-          <Bento>
-            <BentoContent
-              img={FoodX}
-              front="Javascript"
-              back="Javascript"
-              projet="Project école "
-              titre="FoodX"
-            />
-          </Bento>
-          <Bento>
-            <BentoContent
-              img={AdminHomeStage}
-              front="Angular"
-              back="Nestjs"
-              projet="Stage"
-              titre="Doc & Vous"
-            />
-          </Bento>
+          <a
+            href="/project/FoodX"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <Bento>
+              <BentoContent
+                img={FoodX}
+                front="Javascript"
+                back="Javascript"
+                projet="Project école"
+                titre="FoodX"
+              />
+            </Bento>
+          </a>
+          <a
+            href="/project/Doc & Vous"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <Bento>
+              <BentoContent
+                img={AdminHomeStage}
+                front="Angular"
+                back="Nestjs"
+                projet="Stage"
+                titre="Doc & Vous"
+              />
+            </Bento>
+          </a>
         </BentoContainer>
+
         <BentoContainer>
-          <Bento>
-            <BentoContent
-              img={HomeQuickFire}
-              front="React-Native"
-              back="Django"
-              projet="Project école"
-              titre="QuickFire"
-            />
-          </Bento>
+          <a
+            href="/project/QuickFire"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <Bento>
+              <BentoContent
+                img={HomeQuickFire}
+                front="React-Native"
+                back="Django"
+                projet="Project école"
+                titre="QuickFire"
+              />
+            </Bento>
+          </a>
         </BentoContainer>
       </Bentos>
       {/* Skills */}

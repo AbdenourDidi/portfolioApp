@@ -38,6 +38,7 @@ const ProjectImage = ({ title, images }: Props) => {
 
           if (img.naturalHeight > img.naturalWidth) {
             width = img.naturalWidth;
+            console.log("hello");
           }
           return <img width={width} src={image} />;
         })}
