@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 const BentoContentContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -47,14 +47,16 @@ const BentoContent: React.FC<BentoContentProps> = ({
   projet,
   titre,
 }) => {
-  const image = new Image();
-  image.src = img;
-  const width = useMemo(() => {
-    if (image.naturalHeight > image.naturalWidth) {
-      return image.naturalWidth / 3;
-    }
-    return "100%";
-  }, []);
+  const [width, setWidth] = useState("100%");
+  useEffect(() => {
+    const image = new Image();
+    image.src = img;
+    image.onload = () => {
+      if (image.naturalHeight > image.naturalWidth) {
+        setWidth(`${image.naturalWidth / 2.5}px`);
+      }
+    };
+  }, [img]);
 
   return (
     <BentoContentContainer>
