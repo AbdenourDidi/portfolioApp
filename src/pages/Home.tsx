@@ -2,10 +2,14 @@ import Bento from "../components/Bento";
 import styled from "styled-components";
 import Hero from "../components/Hero";
 import Contact from "../components/Contact";
-import BentoContent from "../components/BentoContent";
+import BentoContentProjet from "../components/BentoContentProjet";
 import FoodX from "../assets/FoodX presentation.png";
 import AdminHomeStage from "../assets/Admin Home stage.png";
 import HomeQuickFire from "../assets/Home QuickFire.png";
+import ReactLogo from "../assets/React Logo.png";
+import HtmlLogo from "../assets/HTML5 logo.png";
+import Skills from "./Skills";
+import BentoContentSkill from "../components/BentoContentSkill";
 
 const Test = styled.div`
   justify-content: center;
@@ -22,6 +26,13 @@ const Gap = styled.div`
   display: flex;
   flex-direction: column;
   gap: 70px;
+`;
+
+const TitleH1 = styled.h1`
+  display: flex;
+  flex-direction: center;
+  justify-content: center;
+  /* gap: 15px; */
 `;
 
 const HeroContainer = styled.div`
@@ -42,13 +53,24 @@ const Bentos = styled.div`
   gap: 20px;
 `;
 
+interface SkillProps {
+  skill: string;
+  img: string;
+  experience: string;
+}
 const Home = () => {
+  const langages: SkillProps[] = [];
+  const fronts: SkillProps[] = [];
+  const backs: SkillProps[] = [];
+  const dbs: SkillProps[] = [];
+
   return (
     <Gap>
       <HeroContainer>
         <Hero />
         <Contact />
       </HeroContainer>
+      <TitleH1>Project</TitleH1>
       <Bentos>
         <BentoContainer>
           <a
@@ -56,7 +78,7 @@ const Home = () => {
             style={{ textDecoration: "none", color: "inherit" }}
           >
             <Bento>
-              <BentoContent
+              <BentoContentProjet
                 img={FoodX}
                 front="Javascript"
                 back="Javascript"
@@ -70,7 +92,7 @@ const Home = () => {
             style={{ textDecoration: "none", color: "inherit" }}
           >
             <Bento>
-              <BentoContent
+              <BentoContentProjet
                 img={AdminHomeStage}
                 front="Angular"
                 back="Nestjs"
@@ -87,7 +109,7 @@ const Home = () => {
             style={{ textDecoration: "none", color: "inherit" }}
           >
             <Bento>
-              <BentoContent
+              <BentoContentProjet
                 img={HomeQuickFire}
                 front="React-Native"
                 back="Django"
@@ -98,7 +120,37 @@ const Home = () => {
           </a>
         </BentoContainer>
       </Bentos>
-      {/* Skills */}
+      <TitleH1>Skills</TitleH1>
+      <Bentos>
+        <BentoContainer>
+          <Bento>
+            <BentoContentSkill
+              titre="Langages"
+              listSkill={langages}
+            ></BentoContentSkill>
+          </Bento>
+          <Bento>
+            <BentoContentSkill
+              titre="Frontend"
+              listSkill={fronts}
+            ></BentoContentSkill>
+          </Bento>
+        </BentoContainer>
+        <BentoContainer>
+          <Bento>
+            <BentoContentSkill
+              titre="Backend"
+              listSkill={backs}
+            ></BentoContentSkill>
+          </Bento>
+          <Bento>
+            <BentoContentSkill
+              titre="Data Base"
+              listSkill={dbs}
+            ></BentoContentSkill>
+          </Bento>
+        </BentoContainer>
+      </Bentos>
     </Gap>
   );
 };

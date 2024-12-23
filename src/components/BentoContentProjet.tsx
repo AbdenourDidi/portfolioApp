@@ -40,7 +40,7 @@ interface BentoContentProps {
   titre: string;
 }
 
-const BentoContent: React.FC<BentoContentProps> = ({
+const BentoContentProjet: React.FC<BentoContentProps> = ({
   img,
   front,
   back,
@@ -87,4 +87,4 @@ const BentoContent: React.FC<BentoContentProps> = ({
   );
 };
 
-export default BentoContent;
+export default BentoContentProjet;
