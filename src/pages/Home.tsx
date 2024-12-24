@@ -6,10 +6,21 @@ import BentoContentProjet from "../components/BentoContentProjet";
 import FoodX from "../assets/FoodX presentation.png";
 import AdminHomeStage from "../assets/Admin Home stage.png";
 import HomeQuickFire from "../assets/Home QuickFire.png";
-import ReactLogo from "../assets/React Logo.png";
-import HtmlLogo from "../assets/HTML5 logo.png";
-import Skills from "./Skills";
 import BentoContentSkill from "../components/BentoContentSkill";
+import ReactLogo from "../assets/Frontend/REACT.png";
+import AngularLogo from "../assets/Frontend/ANGULAR.png";
+import JavascriptLogo from "../assets/Frontend/JAVASCRIPT.png";
+import TypescriptLogo from "../assets/Frontend/TYPESCRIPT.png";
+import VuejsLogo from "../assets/Frontend/VUEJS.png";
+
+import NestjsLogo from "../assets/Nestjs Logo.png";
+import MongoLogo from "../assets/Mongo Logo.webp";
+import HtmlLogo from "../assets/Langages/HTML.png";
+import CssLogo from "../assets/Langages/CSS.png";
+import CLogo from "../assets/Langages/C.png";
+import PhpLogo from "../assets/Langages/PHP.png";
+import CSharpLogo from "../assets/Langages/CSHARP.png";
+import PythonLogo from "../assets/Langages/PYTHON.png";
 
 const Test = styled.div`
   justify-content: center;
@@ -59,10 +70,27 @@ interface SkillProps {
   experience: string;
 }
 const Home = () => {
-  const langages: SkillProps[] = [];
-  const fronts: SkillProps[] = [];
-  const backs: SkillProps[] = [];
-  const dbs: SkillProps[] = [];
+  const langages: SkillProps[] = [
+    { skill: "HTML", img: HtmlLogo, experience: "3" },
+    { skill: "CSS", img: CssLogo, experience: "3" },
+    { skill: "C", img: CLogo, experience: "1" },
+    { skill: "PHP", img: PhpLogo, experience: "1" },
+    { skill: "C#", img: CSharpLogo, experience: "2" },
+    { skill: "PYTHON", img: PythonLogo, experience: "2" },
+  ];
+  const fronts: SkillProps[] = [
+    { skill: "REACT", img: ReactLogo, experience: "2" },
+    { skill: "ANGULAR", img: AngularLogo, experience: "3" },
+    { skill: "JAVASCRIPT", img: JavascriptLogo, experience: "3" },
+    { skill: "TYPESCRIPT", img: TypescriptLogo, experience: "3" },
+    { skill: "VUEJS", img: VuejsLogo, experience: "1" },
+  ];
+  const backs: SkillProps[] = [
+    { skill: "NESTJS", img: NestjsLogo, experience: "2" },
+  ];
+  const dbs: SkillProps[] = [
+    { skill: "MONGO", img: MongoLogo, experience: "2" },
+  ];
 
   return (
     <Gap>
@@ -131,7 +159,7 @@ const Home = () => {
           </Bento>
           <Bento>
             <BentoContentSkill
-              titre="Frontend"
+              titre="Front-end"
               listSkill={fronts}
             ></BentoContentSkill>
           </Bento>
@@ -139,7 +167,7 @@ const Home = () => {
         <BentoContainer>
           <Bento>
             <BentoContentSkill
-              titre="Backend"
+              titre="Back-end"
               listSkill={backs}
             ></BentoContentSkill>
           </Bento>
