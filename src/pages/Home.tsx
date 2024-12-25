@@ -46,6 +46,29 @@ const TitleH1 = styled.h1`
   /* gap: 15px; */
 `;
 
+const LevelContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 74px;
+`;
+
+const LevelContainerDetail = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+`;
+
+const SphereLevel = styled.figure`
+  display: block;
+  background: black;
+  opacity: 50%;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  margin: 0;
+`;
+
 const HeroContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -67,30 +90,28 @@ const Bentos = styled.div`
 interface SkillProps {
   skill: string;
   img: string;
-  experience: string;
+  experience: number;
 }
 const Home = () => {
   const langages: SkillProps[] = [
-    { skill: "HTML", img: HtmlLogo, experience: "3" },
-    { skill: "CSS", img: CssLogo, experience: "3" },
-    { skill: "C", img: CLogo, experience: "1" },
-    { skill: "PHP", img: PhpLogo, experience: "1" },
-    { skill: "C#", img: CSharpLogo, experience: "2" },
-    { skill: "PYTHON", img: PythonLogo, experience: "2" },
+    { skill: "HTML", img: HtmlLogo, experience: 3 },
+    { skill: "CSS", img: CssLogo, experience: 3 },
+    { skill: "C#", img: CSharpLogo, experience: 2 },
+    { skill: "PYTHON", img: PythonLogo, experience: 2 },
+    { skill: "C", img: CLogo, experience: 1 },
+    { skill: "PHP", img: PhpLogo, experience: 1 },
   ];
   const fronts: SkillProps[] = [
-    { skill: "REACT", img: ReactLogo, experience: "2" },
-    { skill: "ANGULAR", img: AngularLogo, experience: "3" },
-    { skill: "JAVASCRIPT", img: JavascriptLogo, experience: "3" },
-    { skill: "TYPESCRIPT", img: TypescriptLogo, experience: "3" },
-    { skill: "VUEJS", img: VuejsLogo, experience: "1" },
+    { skill: "ANGULAR", img: AngularLogo, experience: 3 },
+    { skill: "JAVASCRIPT", img: JavascriptLogo, experience: 3 },
+    { skill: "TYPESCRIPT", img: TypescriptLogo, experience: 3 },
+    { skill: "REACT", img: ReactLogo, experience: 2 },
+    { skill: "VUEJS", img: VuejsLogo, experience: 1 },
   ];
   const backs: SkillProps[] = [
-    { skill: "NESTJS", img: NestjsLogo, experience: "2" },
+    { skill: "NESTJS", img: NestjsLogo, experience: 2 },
   ];
-  const dbs: SkillProps[] = [
-    { skill: "MONGO", img: MongoLogo, experience: "2" },
-  ];
+  const dbs: SkillProps[] = [{ skill: "MONGO", img: MongoLogo, experience: 2 }];
 
   return (
     <Gap>
@@ -149,6 +170,23 @@ const Home = () => {
         </BentoContainer>
       </Bentos>
       <TitleH1>Skills</TitleH1>
+      <LevelContainer>
+        <LevelContainerDetail>
+          <b>Confirmé</b>
+          <SphereLevel /> <SphereLevel />
+          <SphereLevel />
+        </LevelContainerDetail>
+        <LevelContainerDetail>
+          <b>Intermédiaire</b>
+          <SphereLevel />
+          <SphereLevel />
+        </LevelContainerDetail>
+        <LevelContainerDetail>
+          <b>Notions</b>
+          <SphereLevel />
+        </LevelContainerDetail>
+      </LevelContainer>
+
       <Bentos>
         <BentoContainer>
           <Bento>

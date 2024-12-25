@@ -10,6 +10,23 @@ const ContentSkill = styled.div`
   display: flex;
   flex-direction: row;
   gap: 69px;
+  align-items: center;
+`;
+
+const SphereLevel = styled.figure`
+  display: block;
+  background: black;
+  opacity: 50%;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  margin: 0;
+`;
+
+const LevelContainerDetail = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
 `;
 
 const LanguageContent = styled.div`
@@ -25,7 +42,7 @@ const TitleH1 = styled.h1`
 interface SkillProps {
   skill: string;
   img: string;
-  experience: string;
+  experience: number;
 }
 
 interface BentoContentProps {
@@ -44,7 +61,11 @@ const BentoContentSkill: React.FC<BentoContentProps> = ({
         <ContentSkill>
           <h1>{skill.skill}</h1>
           <img src={skill.img} height={88} width={134} />
-          <p>{skill.experience}</p>
+          <LevelContainerDetail>
+            {Array.from({ length: skill.experience }).map((_, i) => (
+              <SphereLevel />
+            ))}
+          </LevelContainerDetail>
         </ContentSkill>
       ))}
     </BentoContentContainer>
