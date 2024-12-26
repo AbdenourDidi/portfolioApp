@@ -29,6 +29,12 @@ const LevelContainerDetail = styled.div`
   gap: 25px;
 `;
 
+const StyledImage = styled.img`
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+`;
+
 const LanguageContent = styled.div`
   display: flex;
   flex-direction: row;
@@ -60,7 +66,7 @@ const BentoContentSkill: React.FC<BentoContentProps> = ({
       {listSkill.map((skill) => (
         <ContentSkill>
           <h1>{skill.skill}</h1>
-          <img src={skill.img} height={88} width={134} />
+          <StyledImage src={skill.img} />
           <LevelContainerDetail>
             {Array.from({ length: skill.experience }).map((_, i) => (
               <SphereLevel />
