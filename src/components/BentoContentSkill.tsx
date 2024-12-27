@@ -11,6 +11,7 @@ const ContentSkill = styled.div`
   flex-direction: row;
   gap: 69px;
   align-items: center;
+  justify-content: space-between;
 `;
 
 const SphereLevel = styled.figure`
