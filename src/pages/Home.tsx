@@ -13,9 +13,19 @@ import JavascriptLogo from "../assets/Frontend/JAVASCRIPT.png";
 import TypescriptLogo from "../assets/Frontend/TYPESCRIPT.png";
 import VuejsLogo from "../assets/Frontend/VUEJS.png";
 
-import NestjsLogo from "../assets/Nestjs Logo.png";
-import MongoLogo from "../assets/Mongo Logo.webp";
+import NestjsLogo from "../assets/Backend/NESTJS.png";
+import DjangoLogo from "../assets/Backend/DJANGO.png";
+import SpringLogo from "../assets/Backend/SPRING.png";
+import NetLogo from "../assets/Backend/NET.png";
+
+import MongoLogo from "../assets/DataBase/MONGO.webp";
+import PostgresqlLogo from "../assets/DataBase/POSTGRESQL.png";
+import MysqlLogo from "../assets/DataBase/MYSQL.png";
+import SqliteLogo from "../assets/DataBase/SQLITE.png";
+import MariaLogo from "../assets/DataBase/MARIA.png";
+
 import HtmlLogo from "../assets/Langages/HTML.png";
+import JavaLogo from "../assets/Langages/JAVA.png";
 import CssLogo from "../assets/Langages/CSS.png";
 import CLogo from "../assets/Langages/C.png";
 import PhpLogo from "../assets/Langages/PHP.png";
@@ -94,6 +104,7 @@ interface SkillProps {
 }
 const Home = () => {
   const langages: SkillProps[] = [
+    { skill: "JAVA", img: JavaLogo, experience: 3 },
     { skill: "HTML", img: HtmlLogo, experience: 3 },
     { skill: "CSS", img: CssLogo, experience: 3 },
     { skill: "C#", img: CSharpLogo, experience: 2 },
@@ -109,9 +120,19 @@ const Home = () => {
     { skill: "VUEJS", img: VuejsLogo, experience: 1 },
   ];
   const backs: SkillProps[] = [
+    { skill: "JAVASCRIPT", img: JavascriptLogo, experience: 3 },
     { skill: "NESTJS", img: NestjsLogo, experience: 2 },
+    { skill: "DJANGO", img: DjangoLogo, experience: 2 },
+    { skill: ".NET", img: NetLogo, experience: 2 },
+    { skill: "SPRING", img: SpringLogo, experience: 1 },
   ];
-  const dbs: SkillProps[] = [{ skill: "MONGO", img: MongoLogo, experience: 2 }];
+  const dbs: SkillProps[] = [
+    { skill: "MYSQL", img: MysqlLogo, experience: 3 },
+    { skill: "SQLITE", img: SqliteLogo, experience: 3 },
+    { skill: "MONGO", img: MongoLogo, experience: 2 },
+    { skill: "POSTGRESQL", img: PostgresqlLogo, experience: 2 },
+    { skill: "MARIA", img: MariaLogo, experience: 1 },
+  ];
 
   return (
     <Gap>
