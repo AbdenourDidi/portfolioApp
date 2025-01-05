@@ -51,10 +51,7 @@ interface BentoContentProps {
   listSkill: SkillProps[];
 }
 
-const BentoContentSkill: React.FC<BentoContentProps> = ({
-  titre,
-  listSkill,
-}) => {
+const BentoContentSkill = ({ titre, listSkill }: BentoContentProps) => {
   return (
     <BentoContentContainer>
       <TitleH1>{titre}</TitleH1>
