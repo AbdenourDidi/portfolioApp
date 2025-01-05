@@ -1,5 +1,5 @@
-import React, { PropsWithChildren } from 'react'
-import styled from 'styled-components'
+import React, { PropsWithChildren } from "react";
+import styled from "styled-components";
 
 const GridContainer = styled.div`
   display: grid;
@@ -10,11 +10,8 @@ const GridContainer = styled.div`
   padding: 10px;
 `;
 
-
 const Grid = ({ children }: PropsWithChildren) => {
-  return (
-    <GridContainer>{children}</GridContainer>
-  )
-}
+  return <GridContainer>{children}</GridContainer>;
+};
 
-export default Grid
+export default Grid;
