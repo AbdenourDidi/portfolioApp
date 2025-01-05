@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import React, { useEffect, useMemo, useState } from "react";
 const BentoContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 24px;
+  padding: 22px;
 `;
 
 const ContentSkill = styled.div`
@@ -34,12 +34,6 @@ const StyledImage = styled.img`
   height: 80px;
   width: auto;
   object-fit: contain;
-`;
-
-const LanguageContent = styled.div`
-  display: flex;
-  flex-direction: row;
-  gap: 15px;
 `;
 
 const TitleH1 = styled.h1`
