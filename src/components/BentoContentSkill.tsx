@@ -1,9 +1,14 @@
 import styled from "styled-components";
+
 const BentoContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 24px;
   padding: 22px;
+  @media (max-width: 768px) {
+    padding: 5px;
+    gap: 16px;
+  }
 `;
 
 const ContentSkill = styled.div`
@@ -12,6 +17,9 @@ const ContentSkill = styled.div`
   gap: 69px;
   align-items: center;
   justify-content: space-between;
+  @media (max-width: 768px) {
+    gap: 15px;
+  }
 `;
 
 const SphereLevel = styled.figure`
@@ -34,6 +42,9 @@ const StyledImage = styled.img`
   height: 80px;
   width: auto;
   object-fit: contain;
+  @media (max-width: 768px) {
+    height: 60px;
+  }
 `;
 
 const TitleH1 = styled.h1`

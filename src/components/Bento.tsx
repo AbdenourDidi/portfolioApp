@@ -8,6 +8,11 @@ const Container = styled.div`
   border: 1px solid #e5e7eb;
   overflow: hidden;
   min-width: 46%;
+
+  @media (max-width: 768px) {
+    min-width: 90%;
+    min-height: auto;
+  }
 `;
 
 const Bento = ({ children }: PropsWithChildren) => {
