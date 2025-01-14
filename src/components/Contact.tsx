@@ -12,8 +12,10 @@ const ContactContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   gap: 31px;
+  @media (max-width: 600px) {
+    gap: 10px;
+  }
 `;
-
 
 const Contact = () => {
   return (

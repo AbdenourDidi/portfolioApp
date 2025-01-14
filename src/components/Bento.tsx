@@ -9,9 +9,9 @@ const Container = styled.div`
   overflow: hidden;
   min-width: 46%;
 
-  @media (max-width: 768px) {
+  @media (max-width: 600px) {
     min-width: 90%;
-    min-height: auto;
+    padding: 15px;
   }
 `;
 

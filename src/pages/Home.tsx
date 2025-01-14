@@ -8,7 +8,7 @@ const Gap = styled.div`
   display: flex;
   flex-direction: column;
   gap: 70px;
-  @media (max-width: 768px) {
+  @media (max-width: 600px) {
     gap: 40px;
   }
 `;
@@ -19,7 +19,7 @@ const HeroContainer = styled.div`
   gap: 20px;
   justify-content: center;
   align-items: center;
-  @media (max-width: 768px) {
+  @media (max-width: 600px) {
     gap: 10px;
   }
 `;

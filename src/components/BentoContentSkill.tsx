@@ -5,8 +5,8 @@ const BentoContentContainer = styled.div`
   flex-direction: column;
   gap: 24px;
   padding: 22px;
-  @media (max-width: 768px) {
-    padding: 5px;
+  @media (max-width: 600px) {
+    padding: 2px;
     gap: 16px;
   }
 `;
@@ -17,8 +17,8 @@ const ContentSkill = styled.div`
   gap: 69px;
   align-items: center;
   justify-content: space-between;
-  @media (max-width: 768px) {
-    gap: 15px;
+  @media (max-width: 600px) {
+    gap: 25px;
   }
 `;
 
@@ -36,19 +36,28 @@ const LevelContainerDetail = styled.div`
   display: flex;
   flex-direction: row;
   gap: 25px;
+  @media (max-width: 600px) {
+    gap: 15px;
+  }
 `;
 
 const StyledImage = styled.img`
   height: 80px;
   width: auto;
   object-fit: contain;
-  @media (max-width: 768px) {
-    height: 60px;
+  @media (max-width: 600px) {
+    height: 50px;
   }
 `;
 
-const TitleH1 = styled.h1`
+const TitleBento = styled.h1`
   opacity: 50%;
+`;
+
+const TitleSkill = styled.h1`
+  @media (max-width: 600px) {
+    font-size: 25px;
+  }
 `;
 
 interface SkillProps {
@@ -65,10 +74,10 @@ interface BentoContentProps {
 const BentoContentSkill = ({ titre, listSkill }: BentoContentProps) => {
   return (
     <BentoContentContainer>
-      <TitleH1>{titre}</TitleH1>
+      <TitleBento>{titre}</TitleBento>
       {listSkill.map((skill) => (
         <ContentSkill>
-          <h1>{skill.skill}</h1>
+          <TitleSkill>{skill.skill}</TitleSkill>
           <StyledImage src={skill.img} />
           <LevelContainerDetail>
             {Array.from({ length: skill.experience }).map((_, i) => (

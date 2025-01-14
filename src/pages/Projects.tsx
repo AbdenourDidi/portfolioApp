@@ -9,7 +9,7 @@ const BentoContainer = styled.div`
   display: flex;
   flex-direction: row;
   gap: 20px;
-  @media (max-width: 768px) {
+  @media (max-width: 600px) {
     flex-direction: column;
     gap: 15px;
   }
@@ -19,7 +19,7 @@ const Bentos = styled.div`
   flex-direction: column;
   gap: 20px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 600px) {
     align-items: center;
     gap: 15px;
   }
@@ -34,7 +34,7 @@ const Gap = styled.div`
   display: flex;
   flex-direction: column;
   gap: 70px;
-  @media (max-width: 768px) {
+  @media (max-width: 600px) {
     gap: 40px;
   }
 `;
