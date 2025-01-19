@@ -9,11 +9,20 @@ const BentoContainer = styled.div`
   display: flex;
   flex-direction: row;
   gap: 20px;
+  @media (max-width: 600px) {
+    flex-direction: column;
+    gap: 15px;
+  }
 `;
 const Bentos = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  @media (max-width: 600px) {
+    align-items: center;
+    gap: 15px;
+  }
 `;
 const TitleH1 = styled.h1`
   display: flex;
@@ -25,6 +34,9 @@ const Gap = styled.div`
   display: flex;
   flex-direction: column;
   gap: 70px;
+  @media (max-width: 600px) {
+    gap: 40px;
+  }
 `;
 
 const Projects = () => {
