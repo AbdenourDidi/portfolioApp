@@ -4,6 +4,11 @@ const LevelContainer = styled.div`
   display: flex;
   flex-direction: row;
   gap: 74px;
+  @media (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
 `;
 
 const LevelContainerDetail = styled.div`

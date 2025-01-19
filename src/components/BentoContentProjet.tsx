@@ -32,6 +32,17 @@ const ImageContainer = styled.div`
   align-items: center;
 `;
 
+const StyledImage = styled.img`
+  max-width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.3);
+  @media (max-width: 600px) {
+    width: 100%;
+    height: 100%;
+  }
+`;
+
 interface BentoContentProps {
   img: string;
   front: string;
@@ -47,29 +58,10 @@ const BentoContentProjet: React.FC<BentoContentProps> = ({
   projet,
   titre,
 }) => {
-  const [width, setWidth] = useState("100%");
-  useEffect(() => {
-    const image = new Image();
-    image.src = img;
-    image.onload = () => {
-      if (image.naturalHeight > image.naturalWidth) {
-        setWidth(`${image.naturalWidth / 2.5}px`);
-      }
-    };
-  }, [img]);
-
   return (
     <BentoContentContainer>
       <ImageContainer>
-        <img
-          src={img}
-          width={width}
-          height={275}
-          style={{
-            borderRadius: 10,
-            boxShadow: `0px 4px 20px 0px rgba(0, 0, 0, 0.3)`,
-          }}
-        />
+        <StyledImage src={img} />
       </ImageContainer>
       <LanguageContent>
         <LanguageContentContainer>

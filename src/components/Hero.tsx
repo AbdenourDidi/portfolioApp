@@ -4,6 +4,11 @@ import styled from "styled-components";
 const HeroContainer = styled.div`
   display: flex;
   flex-direction: row;
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 `;
 const DescriptionContainer = styled.div`
   flex-direction: column;
@@ -12,6 +17,9 @@ const DescriptionContainer = styled.div`
   flex: 1;
   padding: 10px;
   padding-right: 150px;
+  @media (max-width: 600px) {
+    padding-right: 0;
+  }
 `;
 
 const ImageContainer = styled.div`
@@ -19,6 +27,9 @@ const ImageContainer = styled.div`
   justify-content: center;
   display: flex;
   flex: 1;
+  @media (max-width: 600px) {
+    margin-bottom: 20px;
+  }
 `;
 
 const ImageRond = styled.div`
@@ -26,6 +37,10 @@ const ImageRond = styled.div`
   overflow: hidden;
   width: 150px;
   height: 150px;
+  @media (max-width: 600px) {
+    width: 120px;
+    height: 120px;
+  }
 `;
 
 const Hero = () => {

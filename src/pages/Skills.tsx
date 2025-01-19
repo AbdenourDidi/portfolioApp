@@ -38,17 +38,29 @@ const BentoContainer = styled.div`
   display: flex;
   flex-direction: row;
   gap: 20px;
+  @media (max-width: 600px) {
+    flex-direction: column;
+    gap: 20px;
+  }
 `;
 const Bentos = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
+  @media (max-width: 600px) {
+    gap: 20px;
+    align-items: center;
+  }
 `;
 
 const Gap = styled.div`
   display: flex;
   flex-direction: column;
   gap: 70px;
+  @media (max-width: 600px) {
+    align-items: center;
+    gap: 40px;
+  }
 `;
 
 interface SkillProps {
