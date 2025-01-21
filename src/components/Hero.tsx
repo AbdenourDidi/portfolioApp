@@ -19,6 +19,8 @@ const DescriptionContainer = styled.div`
   padding-right: 150px;
   @media (max-width: 600px) {
     padding-right: 0;
+    width: 150%;
+    text-align: justify;
   }
 `;
 
