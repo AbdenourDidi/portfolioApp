@@ -10,5 +10,6 @@ export interface Project {
   category: string;
   year: string;
   description: string;
+  link: string;
   content: ProjectContent[];
 }
