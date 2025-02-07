@@ -4,6 +4,7 @@ import BentoContentProjet from "../components/BentoContentProjet";
 import FoodX from "../assets/FoodX presentation.png";
 import AdminHomeStage from "../assets/Admin Home stage.png";
 import HomeQuickFire from "../assets/Home QuickFire.png";
+import QuizApp from "../assets/Quiz App presentation.png";
 
 const BentoContainer = styled.div`
   display: flex;
@@ -87,6 +88,20 @@ const Projects = () => {
                 back="Django"
                 projet="Project école"
                 titre="QuickFire"
+              />
+            </Bento>
+          </a>
+          <a
+            href="/project/Quiz App"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <Bento>
+              <BentoContentProjet
+                img={QuizApp}
+                front="React"
+                back="Javascript"
+                projet="Project Personnel"
+                titre="Quiz App"
               />
             </Bento>
           </a>

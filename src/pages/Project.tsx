@@ -118,6 +118,18 @@ const Project = () => {
           </DetailsContainer>
           <DescriptionContainer>
             <p>{project?.description}</p>
+            {project?.link && (
+              <p>
+                Découvrez l'application ici :{" "}
+                <a
+                  href={project?.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {project?.link}
+                </a>
+              </p>
+            )}
           </DescriptionContainer>
         </ProjectsDescriptionContainer>
       </TopContainer>
