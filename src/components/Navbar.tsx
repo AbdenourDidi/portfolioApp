@@ -43,7 +43,7 @@ const Navbar = () => {
         <Link
           to="/"
         >
-          Acceuil
+          Accueil
         </Link>
         <Link
           to="/projects"
