@@ -55,7 +55,7 @@ const Projects = () => {
                 img={FoodX}
                 front="Javascript"
                 back="Javascript"
-                projet="Project école"
+                projet="Projet école"
                 titre="FoodX"
               />
             </Bento>
@@ -86,7 +86,7 @@ const Projects = () => {
                 img={HomeQuickFire}
                 front="React-Native"
                 back="Django"
-                projet="Project école"
+                projet="Projet école"
                 titre="QuickFire"
               />
             </Bento>
@@ -100,7 +100,7 @@ const Projects = () => {
                 img={QuizApp}
                 front="React"
                 back="Javascript"
-                projet="Project Personnel"
+                projet="Projet Personnel"
                 titre="Quiz App"
               />
             </Bento>
